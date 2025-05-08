@@ -256,7 +256,7 @@ variable "invoke_function_permissions" {
 }
 
 variable "ignore_changes" {
-  type        = set(string)
+  type        = list(string)
   description = "List of fields that will be ignored for synchronisation while updating a lambda function. (e.g. image_uri for base lambda creation)"
   default     = ["last_modified"]
 }
