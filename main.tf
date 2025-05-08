@@ -92,7 +92,7 @@ resource "aws_lambda_function" "this" {
   depends_on = [module.cloudwatch_log_group]
 
   lifecycle {
-    ignore_changes = [last_modified]
+    ignore_changes = var.ignore_changes
   }
 }
 
